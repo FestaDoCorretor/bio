@@ -2,13 +2,20 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>2ª Festa do Corretor de Imóveis • Sinop/MT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Festa do Corretor de Imóveis de Sinop 2026 | 05 de Setembro</title>
+    <meta name="description" content="Participe da 2ª Festa do Corretor de Imóveis de Sinop, dia 05 de setembro de 2026, no Garden Hall Eventos. Garanta seu ingresso individual ou reserve sua mesa empresarial.">
+    <meta name="keywords" content="Festa do Corretor Sinop, Corretor de Imóveis Sinop, Festa do Corretor 2026, Mercado Imobiliário Sinop, Evento Corretores Sinop">
 
-    <!-- Google Fonts: Luxury Serif & Modern Sans -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="2ª Festa do Corretor de Imóveis de Sinop 2026">
+    <meta property="og:description" content="Conectar • Valorizar • Celebrar. Garanta sua participação na maior noite do mercado imobiliário.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Cormorant Garamond, DM Serif Display & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,25 +28,25 @@
                 extend: {
                     colors: {
                         navy: {
-                            950: '#030611',
-                            900: '#060C1B',
-                            850: '#0A1329',
-                            800: '#0F1B38',
-                            700: '#18274C'
+                            base: '#030A16',
+                            card: '#071426',
+                            highlight: '#0B1C32',
                         },
                         gold: {
-                            100: '#FFF8E1',
-                            200: '#F7E3A9',
-                            300: '#E6C875',
-                            400: '#D9B44A',
-                            500: '#C59B27',
-                            600: '#A37E1B',
-                            700: '#7E6011'
+                            main: '#C9A35B',
+                            light: '#D8BB79',
+                            dark: '#98732F',
+                        },
+                        paper: {
+                            light: '#F6F2E9',
+                            muted: '#C9C4B9',
+                            dim: '#8E887C'
                         }
                     },
                     fontFamily: {
-                        serif: ['Cinzel', 'serif'],
-                        sans: ['Montserrat', 'sans-serif']
+                        serif: ['Cormorant Garamond', 'DM Serif Display', 'serif'],
+                        title: ['DM Serif Display', 'Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif']
                     }
                 }
             }
@@ -47,377 +54,538 @@
     </script>
 
     <style>
-        body {
-            background-color: #040814;
-            color: #E2E8F0;
-            font-family: 'Montserrat', sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
+        * {
             -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #030A16;
+            color: #F6F2E9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
             position: relative;
         }
 
-        /* Subtle Luxury Animated Particles Background */
-        .ambient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            background: 
-                radial-gradient(circle at 50% 20%, rgba(197, 155, 39, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(15, 27, 56, 0.5) 0%, transparent 50%);
+        /* Ambient Lighting Effects */
+        .ambient-glow-top {
+            background: radial-gradient(circle, rgba(201, 163, 91, 0.08) 0%, rgba(3, 10, 22, 0) 70%);
         }
 
-        /* Gold Shimmer & Floating Motion */
-        @keyframes goldShimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .ambient-glow-center {
+            background: radial-gradient(circle, rgba(11, 28, 50, 0.6) 0%, rgba(3, 10, 22, 0) 75%);
         }
 
-        @keyframes floatSubtle {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-6px); }
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.03); }
-        }
-
-        .gold-shimmer-text {
-            background: linear-gradient(120deg, #FFF8E1 0%, #F7E3A9 20%, #D9B44A 45%, #FFFFFF 55%, #C59B27 80%, #906D14 100%);
-            background-size: 200% auto;
+        /* Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F6F2E9 0%, #D8BB79 40%, #C9A35B 70%, #98732F 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: goldShimmer 8s linear infinite;
         }
 
-        .float-subtle {
-            animation: floatSubtle 5s ease-in-out infinite;
+        .gold-subtitle-text {
+            background: linear-gradient(135deg, #D8BB79 0%, #C9A35B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .pulse-glow {
-            animation: pulseGlow 4s ease-in-out infinite;
+        /* Refined Editorial Hairlines */
+        .hairline-gold {
+            border-color: rgba(201, 163, 91, 0.25);
         }
 
-        /* Continuous Fluid Line Accents */
-        .gold-line {
+        .divider-gold-center {
             height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(217, 180, 74, 0.6) 50%, transparent 100%);
-            transition: all 0.5s ease;
+            background: linear-gradient(90deg, transparent 0%, rgba(201, 163, 91, 0.35) 50%, transparent 100%);
         }
 
-        /* Luxury Interactive Hover States */
-        .interactive-card {
+        /* Luxury Button Styling */
+        .btn-gold-luxury {
+            background: linear-gradient(135deg, #D8BB79 0%, #C9A35B 50%, #98732F 100%);
+            color: #030A16;
+            font-weight: 600;
+            letter-spacing: 0.08em;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-        }
-        .interactive-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(247, 227, 169, 0.6) !important;
-            box-shadow: 0 15px 35px -10px rgba(197, 155, 39, 0.15);
+            box-shadow: 0 4px 20px rgba(201, 163, 91, 0.15);
         }
 
-        /* High-End Dior Style Buttons */
-        .btn-dior-gold {
-            background: linear-gradient(135deg, #F7E3A9 0%, #D9B44A 50%, #A37E1B 100%);
-            color: #040814;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            box-shadow: 0 4px 20px rgba(197, 155, 39, 0.25);
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-dior-gold::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-            transform: rotate(30deg) translateX(-100%);
-            transition: transform 0.8s ease;
-        }
-
-        .btn-dior-gold:hover::after {
-            transform: rotate(30deg) translateX(100%);
-        }
-
-        .btn-dior-gold:hover {
+        .btn-gold-luxury:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(197, 155, 39, 0.45);
+            box-shadow: 0 6px 28px rgba(201, 163, 91, 0.3);
+            filter: brightness(1.05);
         }
 
-        .btn-dior-outline {
-            background: rgba(4, 8, 20, 0.8);
-            border: 1px solid rgba(217, 180, 74, 0.4);
-            color: #F7E3A9;
-            letter-spacing: 0.12em;
-            transition: all 0.35s ease;
+        .btn-outline-luxury {
+            background: rgba(7, 20, 38, 0.4);
+            border: 1px solid rgba(201, 163, 91, 0.4);
+            color: #D8BB79;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .btn-dior-outline:hover {
-            border-color: rgba(247, 227, 169, 0.9);
-            background: rgba(15, 27, 56, 0.9);
-            color: #FFFFFF;
+        .btn-outline-luxury:hover {
+            border-color: #D8BB79;
+            background: rgba(201, 163, 91, 0.08);
+            color: #F6F2E9;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 5px;
+        /* Bottom Sheet Modal Styling */
+        .bottom-sheet-backdrop {
+            background: rgba(3, 10, 22, 0.82);
+            backdrop-filter: blur(12px);
+            transition: opacity 0.3s ease;
         }
-        ::-webkit-scrollbar-track {
-            background: #040814;
+
+        .bottom-sheet-panel {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        ::-webkit-scrollbar-thumb {
-            background: #C59B27;
-            border-radius: 2px;
+
+        /* Safe Area Padding for iOS Devices */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 16px);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-gold-500 selection:text-navy-950 pb-28 md:pb-12">
+<body class="min-h-screen text-paper-muted antialiased selection:bg-gold-main selection:text-navy-base pb-28 md:pb-12">
 
-    <!-- Ambient Subtle Glow Container -->
-    <div class="ambient-bg"></div>
+    <!-- AMBIENT LIGHTING BACKGROUND -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[600px] ambient-glow-top"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] ambient-glow-center"></div>
+        <div class="absolute -bottom-40 right-0 w-[600px] h-[600px] ambient-glow-top opacity-50"></div>
+    </div>
 
-    <div class="relative z-10">
+    <!-- MAIN EDITORIAL CONTAINER -->
+    <div class="relative z-10 max-w-[1180px] mx-auto px-5 sm:px-8 lg:px-12">
 
-        <!-- TOP NAVIGATION -->
-        <header class="sticky top-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-gold-500/15 px-4 sm:px-8 py-3.5 transition-all">
-            <div class="max-w-6xl mx-auto flex items-center justify-between">
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-8 h-8 rounded-full border border-gold-400/40 bg-navy-900/90 flex items-center justify-center transition-transform group-hover:rotate-12">
-                        <i class="fa-solid fa-crown text-gold-400 text-xs"></i>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-serif text-xs font-extrabold tracking-[0.2em] gold-shimmer-text uppercase leading-none">FESTA DO CORRETOR</span>
-                        <span class="text-[9px] text-gray-400 tracking-widest uppercase mt-1">SINOP • MT • 2026</span>
-                    </div>
-                </a>
-
-                <a href="https://forms.gle/XfeTBtuYo4sXJquL7" target="_blank" rel="noopener" class="btn-dior-gold px-4 py-2.5 rounded-full text-[11px] flex items-center gap-2 uppercase font-bold tracking-widest">
-                    <i class="fa-solid fa-check-to-slot"></i>
-                    <span class="hidden sm:inline">VOTAR NO PRÊMIO</span>
-                    <span class="sm:hidden">VOTAR</span>
-                </a>
+        <!-- HEADER / NAVIGATION -->
+        <header class="py-6 sm:py-8 flex items-center justify-between border-b hairline-gold">
+            <div class="flex items-center gap-3">
+                <span class="font-title text-xl sm:text-2xl text-paper-light tracking-wide font-light">
+                    Festa do Corretor
+                </span>
+                <span class="text-[10px] sm:text-xs text-gold-main uppercase tracking-[0.25em] pt-1">
+                    • Sinop
+                </span>
             </div>
+
+            <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%20de%20Sinop%202026." 
+               target="_blank" 
+               rel="noopener"
+               class="hidden sm:inline-flex items-center gap-2 text-xs text-paper-light hover:text-gold-light transition-colors tracking-widest uppercase">
+                <i class="fa-brands fa-whatsapp text-gold-main text-sm"></i>
+                <span>Contato Concierge</span>
+            </a>
         </header>
 
-        <!-- HERO SECTION (EDITORIAL INVITATION STYLE - NO BLOCK CARDS) -->
-        <section class="relative pt-12 pb-14 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+        <!-- HERO SECTION -->
+        <section class="pt-12 sm:pt-20 pb-16 text-center space-y-8 max-w-4xl mx-auto relative">
             
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/5 text-gold-300 text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 float-subtle">
-                <i class="fa-solid fa-star text-[9px] text-gold-400"></i>
+            <!-- TOP TAGS -->
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-navy-card/80 border hairline-gold text-xs tracking-[0.3em] uppercase text-gold-light font-medium">
+                <span>SINOP - MT</span>
+                <span class="text-gold-main/40">•</span>
                 <span>2ª EDIÇÃO DE GALA</span>
-                <i class="fa-solid fa-star text-[9px] text-gold-400"></i>
             </div>
 
-            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-wider leading-tight gold-shimmer-text mb-4">
-                Festa do Corretor <br class="hidden sm:block">de Imóveis
-            </h1>
+            <!-- HUMMINGBIRD VECTOR (BEIJA-FLOR TOTALLY VISIBLE) -->
+            <div class="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto my-4 flex items-center justify-center">
+                <svg class="w-full h-full text-gold-main drop-shadow-[0_8px_24px_rgba(201,163,91,0.25)]" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 45 C 35 30, 50 25, 65 30 C 80 20, 95 18, 110 12 C 100 25, 92 38, 85 45 C 95 55, 105 70, 112 85 C 98 78, 85 70, 75 62 C 68 75, 55 88, 38 95 C 48 82, 52 70, 50 60 C 40 62, 30 58, 25 45 Z" fill="url(#heroGoldGrad)" />
+                    <path d="M65 30 C 75 22, 90 20, 105 15 C 95 26, 88 35, 82 42" stroke="#F6F2E9" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M72 38 C 80 32, 90 28, 100 24" stroke="#D8BB79" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M50 60 C 42 72, 30 82, 18 88 C 28 80, 36 70, 42 62" stroke="#F6F2E9" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M48 65 C 40 75, 26 88, 12 95 C 24 86, 33 75, 40 66" stroke="#C9A35B" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M25 45 L5 48" stroke="#F6F2E9" stroke-width="1.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="heroGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F6F2E9" />
+                            <stop offset="35%" stop-color="#D8BB79" />
+                            <stop offset="70%" stop-color="#C9A35B" />
+                            <stop offset="100%" stop-color="#98732F" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
 
-            <p class="font-serif text-xs sm:text-base tracking-[0.3em] text-gold-200 font-medium uppercase mb-8 opacity-90">
-                CONECTAR • VALORIZAR • CELEBRAR
-            </p>
-
-            <div class="w-32 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent mx-auto mb-10"></div>
-
-            <!-- FLUID ESSENTIALS DISPLAY (Dior Editorial Layout - Clean typography with gold separators) -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 max-w-3xl mx-auto mb-12 text-center">
+            <!-- MAIN TITLE -->
+            <div class="space-y-3">
+                <h1 class="font-title text-4xl sm:text-6xl lg:text-7xl font-normal text-paper-light tracking-tight leading-[1.05]">
+                    2ª Festa do Corretor<br class="hidden sm:inline">
+                    <span class="italic gold-gradient-text">de Imóveis de Sinop</span>
+                </h1>
                 
-                <div class="flex flex-col items-center">
-                    <span class="text-[10px] text-gold-400 uppercase tracking-[0.25em] font-semibold mb-1">Data</span>
-                    <strong class="font-serif text-base sm:text-lg text-gold-100 font-bold uppercase tracking-wider">05 de Setembro de 2026</strong>
-                    <span class="text-xs text-gray-400 font-light">Sábado</span>
-                </div>
-
-                <div class="hidden md:block w-px h-10 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
-                <div class="md:hidden w-24 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
-
-                <div class="flex flex-col items-center">
-                    <span class="text-[10px] text-gold-400 uppercase tracking-[0.25em] font-semibold mb-1">Local</span>
-                    <strong class="font-serif text-base sm:text-lg text-gold-100 font-bold uppercase tracking-wider">Garden Hall Eventos</strong>
-                    <span class="text-xs text-gray-400 font-light">Sinop – MT</span>
-                </div>
-
-                <div class="hidden md:block w-px h-10 bg-gradient-to-b from-transparent via-gold-500/40 to-transparent"></div>
-                <div class="md:hidden w-24 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
-
-                <div class="flex flex-col items-center">
-                    <span class="text-[10px] text-gold-400 uppercase tracking-[0.25em] font-semibold mb-1">Horário</span>
-                    <strong class="font-serif text-base sm:text-lg text-gold-100 font-bold uppercase tracking-wider">Início às 20h00</strong>
-                    <span class="text-xs text-gold-300 font-light">Recepção de Gala</span>
-                </div>
-
+                <p class="font-serif text-lg sm:text-2xl text-gold-light italic tracking-widest pt-2">
+                    CONECTAR • VALORIZAR • CELEBRAR
+                </p>
             </div>
 
-            <!-- PRIMARY ACTION HUB -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
-                <a href="https://forms.gle/XfeTBtuYo4sXJquL7" target="_blank" rel="noopener" class="btn-dior-gold w-full sm:w-1/2 py-4 px-6 rounded-xl flex items-center justify-center gap-2 text-xs font-black uppercase tracking-widest">
-                    <i class="fa-solid fa-trophy text-navy-950 text-sm"></i>
-                    <span>VOTAR NO PRÊMIO</span>
-                </a>
+            <!-- EVENT DETAILS SUMMARY -->
+            <div class="pt-4 pb-2 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs sm:text-sm text-paper-muted uppercase tracking-[0.2em]">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-gold-main"></i>
+                    <span>05 DE SETEMBRO DE 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock text-gold-main"></i>
+                    <span>20H00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold-main"></i>
+                    <span>GARDEN HALL EVENTOS</span>
+                </div>
+            </div>
 
-                <a href="https://wa.me/5566999647852?text=Ol%C3%A1!%20Tenho%20interesse%20em%20garantir%20minha%20presen%C3%A7a%20na%202%C2%AA%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%202026." target="_blank" rel="noopener" class="btn-dior-outline w-full sm:w-1/2 py-4 px-6 rounded-xl flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest">
-                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                    <span>RESERVAR LUGAR</span>
+            <!-- HERO CTA -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#participacao" class="w-full sm:w-auto px-9 py-4 rounded-full btn-gold-luxury font-sans text-xs tracking-[0.2em] uppercase font-semibold text-center">
+                    GARANTIR MINHA PARTICIPAÇÃO
                 </a>
             </div>
+
+            <!-- MICRO TEXT -->
+            <p class="text-xs text-paper-dim tracking-widest uppercase pt-1">
+                Ingresso Individual • Mesa Empresarial
+            </p>
 
         </section>
 
-        <div class="max-w-4xl mx-auto px-4"><div class="gold-line"></div></div>
+        <!-- DIVIDER -->
+        <div class="divider-gold-center my-8"></div>
 
-        <!-- VOTAÇÃO OFICIAL SECTION -->
-        <section class="py-16 px-4 sm:px-6 max-w-3xl mx-auto text-center space-y-6">
-            <div class="w-12 h-12 rounded-full border border-gold-400/40 bg-gold-500/10 flex items-center justify-center mx-auto mb-2 pulse-glow">
-                <i class="fa-solid fa-award text-gold-400 text-xl"></i>
-            </div>
-
-            <span class="text-[10px] text-gold-400 uppercase tracking-[0.3em] font-semibold block">Reconhecimento do Mercado</span>
-            
-            <h2 class="font-serif text-2xl sm:text-4xl font-bold gold-shimmer-text uppercase">
-                Prêmio Destaque Imobiliário
+        <!-- MANIFESTO SECTION -->
+        <section class="py-12 sm:py-20 text-center max-w-3xl mx-auto space-y-6">
+            <h2 class="font-title text-2xl sm:text-4xl text-paper-light tracking-wide uppercase">
+                CONECTAR. VALORIZAR. CELEBRAR.
             </h2>
-
-            <p class="text-xs sm:text-sm text-gray-300 font-light max-w-xl mx-auto leading-relaxed">
-                Sua voz consagra as empresas e profissionais que movem o setor imobiliário de Sinop. Participe da votação oficial e celebre a excelência.
+            <p class="font-serif text-lg sm:text-2xl text-paper-muted leading-relaxed font-light italic">
+                “Uma noite criada para reunir e reconhecer os profissionais e empresas que movimentam e transformam o mercado imobiliário de Sinop.”
             </p>
-
-            <div class="pt-2">
-                <a href="https://forms.gle/XfeTBtuYo4sXJquL7" target="_blank" rel="noopener" class="btn-dior-gold py-4 px-8 rounded-xl inline-flex items-center justify-center gap-2.5 text-xs font-black uppercase tracking-widest">
-                    <i class="fa-solid fa-check-to-slot text-navy-950 text-base"></i>
-                    <span>ACESSAR FORMULÁRIO DE VOTAÇÃO</span>
-                </a>
-            </div>
         </section>
 
-        <div class="max-w-4xl mx-auto px-4"><div class="gold-line"></div></div>
+        <!-- DIVIDER -->
+        <div class="divider-gold-center my-8"></div>
 
-        <!-- SUA PRESENÇA NA GALA (EDITORIAL LAYOUT WITHOUT CARDS/BLOCKS) -->
-        <section class="py-16 px-4 sm:px-6 max-w-4xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="text-[10px] text-gold-400 uppercase tracking-[0.3em] font-semibold block mb-2">Acesso Exclusivo</span>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold gold-shimmer-text uppercase">Sua Presença na Gala</h2>
+        <!-- SECTION PARTICIPAÇÃO -->
+        <section id="participacao" class="py-12 sm:py-20 space-y-12 scroll-mt-8">
+            
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-xs text-gold-main tracking-[0.3em] uppercase block font-semibold">
+                    PARTICIPAÇÃO EXCLUSIVA
+                </span>
+                <h2 class="font-title text-3xl sm:text-5xl text-paper-light tracking-tight">
+                    Escolha Como Participar
+                </h2>
+                <p class="text-sm sm:text-base text-paper-muted">
+                    Garanta seu lugar na 2ª Festa do Corretor de Imóveis de Sinop.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-                
-                <!-- EXPERIÊNCIA INDIVIDUAL -->
-                <div class="flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="border-b border-gold-500/20 pb-4">
-                            <span class="text-[10px] text-gold-400 uppercase tracking-[0.2em] block">Convite Individual</span>
-                            <h3 class="font-serif text-2xl font-bold text-gold-100 uppercase tracking-wide">Experiência de Gala</h3>
+            <!-- EDITORIAL PARTICIPATION OPTIONS (NO HEAVY CARDS) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+
+                <!-- OPTION 1: INGRESSO INDIVIDUAL -->
+                <div class="p-8 sm:p-10 rounded-2xl bg-navy-card/60 border hairline-gold flex flex-col justify-between space-y-8 relative group hover:border-gold-main/50 transition-all duration-300">
+                    <div class="space-y-6">
+                        
+                        <div class="space-y-2 border-b hairline-gold pb-6">
+                            <span class="text-[11px] text-gold-main tracking-[0.25em] uppercase font-semibold block">
+                                CONVITE INDIVIDUAL
+                            </span>
+                            <h3 class="font-title text-2xl sm:text-3xl text-paper-light">
+                                Ingresso Individual
+                            </h3>
+                            <div class="pt-2 flex items-baseline gap-2">
+                                <span class="font-title text-3xl sm:text-4xl text-gold-light">R$ 300,00</span>
+                            </div>
                         </div>
 
-                        <ul class="space-y-3.5 text-xs sm:text-sm text-gray-300 font-light pt-2">
+                        <!-- BENEFITS -->
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-paper-muted">
                             <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
-                                <span>Acesso à cerimônia de premiação de gala</span>
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span>Acesso individual ao evento</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
-                                <span>Networking de alto padrão com líderes do setor</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
-                                <span>Coquetel refinado e recepção de boas-vindas</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1!%20Tenho%20interesse%20em%20adquirir%20um%20ingresso%20individual%20para%20a%202%C2%AA%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%202026." target="_blank" rel="noopener" class="btn-dior-gold py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 text-xs font-bold tracking-widest uppercase">
-                        <i class="fa-brands fa-whatsapp text-sm text-navy-950"></i>
-                        <span>SOLICITAR INGRESSO INDIVIDUAL</span>
-                    </a>
-                </div>
-
-                <!-- MESA EMPRESARIAL -->
-                <div class="flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="border-b border-gold-500/20 pb-4">
-                            <span class="text-[10px] text-gold-400 uppercase tracking-[0.2em] block">Espaço Corporativo</span>
-                            <h3 class="font-serif text-2xl font-bold text-gold-100 uppercase tracking-wide">Mesa Empresarial</h3>
-                        </div>
-
-                        <ul class="space-y-3.5 text-xs sm:text-sm text-gray-300 font-light pt-2">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
-                                <span>Mesa exclusiva para 10 convidados</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Jantar Premium All Inclusive</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span>Atrações e entretenimento exclusivo</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span>Acesso completo à área do evento</span>
+                            </li>
+                        </ul>
+
+                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-4 italic">
+                            <i class="fa-regular fa-credit-card mr-1 text-gold-dark"></i>
+                            Em até 4x no cartão de crédito, com taxa da maquininha.
+                        </div>
+
+                    </div>
+
+                    <!-- CTA INGRESSO INDIVIDUAL -->
+                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20no%20ingresso%20individual%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20garantir%20o%20meu." 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="w-full py-4 rounded-xl btn-outline-luxury text-center font-sans text-xs tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+                        <span>QUERO MEU INGRESSO</span>
+                    </a>
+                </div>
+
+                <!-- OPTION 2: MESA EMPRESARIAL -->
+                <div class="p-8 sm:p-10 rounded-2xl bg-navy-card/90 border border-gold-main/40 flex flex-col justify-between space-y-8 relative group hover:border-gold-main transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    
+                    <!-- HIGHLIGHT BADGE -->
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-main text-navy-base text-[10px] tracking-[0.2em] font-bold uppercase">
+                        PARA 10 CONVIDADOS
+                    </div>
+
+                    <div class="space-y-6">
+                        
+                        <div class="space-y-2 border-b hairline-gold pb-6">
+                            <span class="text-[11px] text-gold-main tracking-[0.25em] uppercase font-semibold block">
+                                ESPAÇO CORPORATIVO
+                            </span>
+                            <h3 class="font-title text-2xl sm:text-3xl text-paper-light">
+                                Mesa Empresarial
+                            </h3>
+                            <div class="pt-2 flex items-baseline gap-2">
+                                <span class="font-title text-3xl sm:text-4xl text-gold-light">R$ 2.500,00</span>
+                            </div>
+                        </div>
+
+                        <!-- BENEFITS -->
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-paper-muted">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span class="text-paper-light font-medium">Mesa exclusiva para 10 convidados</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span>Jantar Premium All Inclusive</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Identificação da empresa na mesa</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Acesso completo ao evento</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-400 text-xs mt-1"></i>
-                                <span>Posicionamento de prestígio para sua equipe e convidados</span>
-                            </li>
                         </ul>
+
+                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-4 italic">
+                            <i class="fa-regular fa-credit-card mr-1 text-gold-dark"></i>
+                            Em até 10x no cartão de crédito, com taxa da maquininha.
+                        </div>
+
                     </div>
 
-                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1!%20Tenho%20interesse%20em%20comprar%20uma%20Mesa%20Empresarial%20para%20a%202%C2%AA%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%202026." target="_blank" rel="noopener" class="btn-dior-outline py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 text-xs font-bold tracking-widest uppercase">
-                        <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+                    <!-- CTA MESA EMPRESARIAL -->
+                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20fazer%20a%20reserva." 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="w-full py-4 rounded-xl btn-gold-luxury text-center font-sans text-xs tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
                         <span>RESERVAR MESA EMPRESARIAL</span>
                     </a>
                 </div>
 
             </div>
+
         </section>
 
-        <div class="max-w-4xl mx-auto px-4"><div class="gold-line"></div></div>
+        <!-- DIVIDER -->
+        <div class="divider-gold-center my-8"></div>
 
-        <!-- REALIZAÇÃO & LOCAL -->
-        <section class="py-12 px-4 sm:px-6 max-w-4xl mx-auto">
-            <div class="text-center space-y-3">
-                <span class="text-[10px] text-gold-400 uppercase tracking-[0.3em] font-semibold block">Realização Oficial</span>
-                <h3 class="font-serif text-2xl font-bold text-gold-100 uppercase">Elenir Kujat</h3>
-                <p class="text-xs text-gold-300 tracking-wider">Corretora de Imóveis • CRECI F-10468</p>
-                <p class="text-xs text-gray-400 font-light max-w-md mx-auto leading-relaxed pt-1">
-                    Idealizadora e realizadora da 2ª Festa do Corretor de Imóveis de Sinop/MT.
+        <!-- SECTION TROFÉU BEIJA-FLOR -->
+        <section class="py-12 sm:py-20 space-y-8 max-w-3xl mx-auto text-center">
+            
+            <div class="space-y-3">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-highlight border hairline-gold text-gold-light text-[10px] tracking-[0.25em] uppercase font-medium">
+                    <i class="fa-solid fa-trophy text-gold-main text-xs"></i>
+                    <span>VOTAÇÃO OFICIAL ABERTA</span>
+                </div>
+
+                <h2 class="font-title text-3xl sm:text-5xl text-paper-light tracking-tight pt-2">
+                    Troféu Beija-Flor
+                </h2>
+                <p class="font-serif text-lg sm:text-xl text-gold-light italic">
+                    Destaques do Ano no Mercado Imobiliário
                 </p>
             </div>
+
+            <p class="text-sm sm:text-base text-paper-muted leading-relaxed max-w-xl mx-auto">
+                Vote nos profissionais e empresas que se destacam e fazem a diferença no mercado imobiliário de Sinop.
+            </p>
+
+            <div class="pt-4">
+                <a href="https://forms.gle/fajBNp1d1fyJDnV38" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full btn-outline-luxury font-sans text-xs tracking-[0.2em] uppercase font-semibold">
+                    <i class="fa-solid fa-check-to-slot text-gold-main"></i>
+                    <span>VOTAR NO PRÊMIO BEIJA-FLOR</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-paper-dim"></i>
+                </a>
+            </div>
+
         </section>
 
+        <!-- DIVIDER -->
+        <div class="divider-gold-center my-8"></div>
+
         <!-- FOOTER -->
-        <footer class="py-8 border-t border-gold-500/15 text-center text-xs text-gray-400 space-y-2 px-4">
-            <p class="font-serif text-gold-300 uppercase tracking-widest font-bold">
-                2ª Festa do Corretor de Imóveis 2026 • Sinop – MT
+        <footer class="py-12 text-center space-y-8 border-t hairline-gold">
+            
+            <div class="space-y-2">
+                <h3 class="font-title text-2xl text-paper-light">
+                    2ª Festa do Corretor de Imóveis de Sinop
+                </h3>
+                <p class="text-xs text-gold-main tracking-[0.25em] uppercase">
+                    05 de Setembro de 2026 • 20h00 • Garden Hall Eventos
+                </p>
+            </div>
+
+            <div class="space-y-1 text-xs text-paper-muted">
+                <p class="font-semibold text-paper-light">Realização: Elenir Kujat</p>
+                <p class="text-paper-dim">Corretora de Imóveis • CRECI F-10468</p>
+                <p class="text-gold-light pt-1">(66) 99964-7852</p>
+            </div>
+
+            <div class="pt-2">
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%20de%20Sinop%202026." 
+                   target="_blank" 
+                   rel="noopener"
+                   class="inline-flex items-center gap-2 text-xs text-paper-light hover:text-gold-light transition-colors tracking-widest uppercase border-b border-gold-main/40 pb-1">
+                    <i class="fa-brands fa-whatsapp text-gold-main text-sm"></i>
+                    <span>FALAR COM ELENIR NO WHATSAPP</span>
+                </a>
+            </div>
+
+            <p class="font-serif text-xs text-paper-dim italic tracking-widest pt-4">
+                PARTICIPE DESTE MOMENTO INCRÍVEL
             </p>
-            <p class="text-[10px] text-gray-500">
-                Realização: Elenir Kujat • CRECI F-10468 &copy; 2026
+
+            <p class="text-[10px] text-paper-dim/60 pt-4">
+                Sinop/MT &copy; 2026 • Todos os direitos reservados.
             </p>
         </footer>
 
-        <!-- MOBILE FIXED CONCIERGE BAR -->
-        <div class="fixed bottom-0 left-0 w-full z-50 bg-navy-950/95 border-t border-gold-500/30 p-3 sm:hidden backdrop-blur-md flex items-center justify-between gap-3">
-            <a href="https://forms.gle/XfeTBtuYo4sXJquL7" target="_blank" rel="noopener" class="btn-dior-gold flex-1 py-3 rounded-lg text-center text-[10px] font-black uppercase tracking-widest">
-                <i class="fa-solid fa-trophy mr-1"></i> VOTAR
-            </a>
-            <a href="https://wa.me/5566999647852?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%202%C2%AA%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%202026." target="_blank" rel="noopener" class="btn-dior-outline flex-1 py-3 rounded-lg text-center text-[10px] font-bold uppercase tracking-widest border-emerald-500/50 text-emerald-300">
-                <i class="fa-brands fa-whatsapp text-xs mr-1 text-emerald-400"></i> CONTATO
-            </a>
-        </div>
-
     </div>
 
+    <!-- FIXED MOBILE BOTTOM ACTION BAR (CTA MOBILE FIXO) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-navy-base/95 backdrop-blur-md border-t hairline-gold px-4 py-3 sm:hidden pb-safe">
+        <div class="flex items-center justify-between gap-3 max-w-md mx-auto">
+            <div class="text-[11px] leading-tight">
+                <span class="block text-gold-main font-semibold tracking-wider">05 SET • 20H</span>
+                <span class="text-[10px] text-paper-dim">Garden Hall</span>
+            </div>
+            
+            <button onclick="openBottomSheet()" 
+                    class="flex-1 py-3 px-4 rounded-full btn-gold-luxury text-[11px] tracking-[0.15em] font-bold uppercase text-center flex items-center justify-center gap-2">
+                <span>GARANTIR PARTICIPAÇÃO</span>
+                <i class="fa-solid fa-chevron-up text-[10px]"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- MOBILE BOTTOM SHEET MODAL -->
+    <div id="bottomSheetModal" class="fixed inset-0 z-50 pointer-events-none hidden">
+        <!-- Backdrop -->
+        <div id="bottomSheetBackdrop" 
+             onclick="closeBottomSheet()" 
+             class="absolute inset-0 bottom-sheet-backdrop opacity-0 pointer-events-auto"></div>
+
+        <!-- Sheet Panel -->
+        <div id="bottomSheetPanel" 
+             class="absolute bottom-0 left-0 right-0 bg-navy-card border-t hairline-gold rounded-t-3xl p-6 sm:p-8 space-y-6 transform translate-y-full pointer-events-auto pb-safe">
+            
+            <!-- Handle indicator -->
+            <div class="w-12 h-1 bg-gold-main/30 rounded-full mx-auto"></div>
+
+            <div class="text-center space-y-1">
+                <span class="text-[10px] text-gold-main tracking-[0.25em] uppercase font-semibold">2ª FESTA DO CORRETOR</span>
+                <h3 class="font-title text-xl text-paper-light">Escolha sua Experiência</h3>
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="space-y-3">
+                <!-- INGRESSO INDIVIDUAL -->
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20no%20ingresso%20individual%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20garantir%20o%20meu." 
+                   target="_blank" 
+                   rel="noopener"
+                   onclick="closeBottomSheet()"
+                   class="w-full p-4 rounded-xl bg-navy-highlight border hairline-gold flex items-center justify-between text-left group">
+                    <div>
+                        <span class="text-xs text-gold-light font-bold block uppercase tracking-wider">Ingresso Individual</span>
+                        <span class="text-[11px] text-paper-muted">R$ 300,00 • Jantar All Inclusive</span>
+                    </div>
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                </a>
+
+                <!-- MESA EMPRESARIAL -->
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20fazer%20a%20reserva." 
+                   target="_blank" 
+                   rel="noopener"
+                   onclick="closeBottomSheet()"
+                   class="w-full p-4 rounded-xl bg-navy-highlight border border-gold-main/50 flex items-center justify-between text-left group">
+                    <div>
+                        <span class="text-xs text-gold-main font-bold block uppercase tracking-wider">Mesa Empresarial</span>
+                        <span class="text-[11px] text-paper-muted">R$ 2.500,00 • Para 10 convidados</span>
+                    </div>
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                </a>
+
+                <!-- FALAR COM ELENIR -->
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%20de%20Sinop%202026." 
+                   target="_blank" 
+                   rel="noopener"
+                   onclick="closeBottomSheet()"
+                   class="w-full py-3 rounded-xl border hairline-gold text-center text-xs text-paper-muted flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-gold-main"></i>
+                    <span>Falar com Elenir Kujat</span>
+                </a>
+            </div>
+
+            <!-- CANCEL BUTTON -->
+            <button onclick="closeBottomSheet()" class="w-full py-2 text-xs text-paper-dim hover:text-paper-light text-center uppercase tracking-widest">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openBottomSheet() {
+            const modal = document.getElementById('bottomSheetModal');
+            const backdrop = document.getElementById('bottomSheetBackdrop');
+            const panel = document.getElementById('bottomSheetPanel');
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                panel.classList.remove('translate-y-full');
+            }, 10);
+        }
+
+        function closeBottomSheet() {
+            const modal = document.getElementById('bottomSheetModal');
+            const backdrop = document.getElementById('bottomSheetBackdrop');
+            const panel = document.getElementById('bottomSheetPanel');
+
+            backdrop.classList.add('opacity-0');
+            panel.classList.add('translate-y-full');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 350);
+        }
+    </script>
 </body>
 </html>
