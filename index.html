@@ -67,20 +67,45 @@
             position: relative;
         }
 
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.08); }
+        }
+
+        .animate-float {
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 6s ease-in-out infinite;
+        }
+
         /* Ambient Lighting Effects */
         .ambient-glow-top {
-            background: radial-gradient(circle, rgba(201, 163, 91, 0.08) 0%, rgba(3, 10, 22, 0) 70%);
+            background: radial-gradient(circle, rgba(201, 163, 91, 0.12) 0%, rgba(3, 10, 22, 0) 70%);
         }
 
         .ambient-glow-center {
-            background: radial-gradient(circle, rgba(11, 28, 50, 0.6) 0%, rgba(3, 10, 22, 0) 75%);
+            background: radial-gradient(circle, rgba(11, 28, 50, 0.7) 0%, rgba(3, 10, 22, 0) 75%);
         }
 
-        /* Gold Gradient Text */
+        /* Gold Gradient Text with Smooth Shimmer */
         .gold-gradient-text {
-            background: linear-gradient(135deg, #F6F2E9 0%, #D8BB79 40%, #C9A35B 70%, #98732F 100%);
+            background: linear-gradient(120deg, #F6F2E9 0%, #D8BB79 25%, #C9A35B 50%, #F6F2E9 75%, #98732F 100%);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: shimmer 10s linear infinite;
         }
 
         .gold-subtitle-text {
@@ -91,12 +116,12 @@
 
         /* Refined Editorial Hairlines */
         .hairline-gold {
-            border-color: rgba(201, 163, 91, 0.25);
+            border-color: rgba(201, 163, 91, 0.22);
         }
 
         .divider-gold-center {
             height: 1px;
-            background: linear-gradient(90deg, transparent 0%, rgba(201, 163, 91, 0.35) 50%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(201, 163, 91, 0.4) 50%, transparent 100%);
         }
 
         /* Luxury Button Styling */
@@ -106,33 +131,46 @@
             font-weight: 600;
             letter-spacing: 0.08em;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 20px rgba(201, 163, 91, 0.15);
+            box-shadow: 0 4px 20px rgba(201, 163, 91, 0.2);
         }
 
         .btn-gold-luxury:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(201, 163, 91, 0.3);
-            filter: brightness(1.05);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 8px 32px rgba(201, 163, 91, 0.38);
+            filter: brightness(1.08);
         }
 
         .btn-outline-luxury {
-            background: rgba(7, 20, 38, 0.4);
-            border: 1px solid rgba(201, 163, 91, 0.4);
+            background: rgba(7, 20, 38, 0.5);
+            border: 1px solid rgba(201, 163, 91, 0.35);
             color: #D8BB79;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(12px);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-outline-luxury:hover {
             border-color: #D8BB79;
-            background: rgba(201, 163, 91, 0.08);
+            background: rgba(201, 163, 91, 0.12);
             color: #F6F2E9;
             transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(201, 163, 91, 0.15);
+        }
+
+        /* Glassmorphic Fluid Cards */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(7, 20, 38, 0.7) 0%, rgba(3, 10, 22, 0.85) 100%);
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 163, 91, 0.15);
         }
 
         /* Bottom Sheet Modal Styling */
         .bottom-sheet-backdrop {
-            background: rgba(3, 10, 22, 0.82);
+            background: rgba(3, 10, 22, 0.85);
             backdrop-filter: blur(12px);
             transition: opacity 0.3s ease;
         }
@@ -151,9 +189,9 @@
 
     <!-- AMBIENT LIGHTING BACKGROUND -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[600px] ambient-glow-top"></div>
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] ambient-glow-center"></div>
-        <div class="absolute -bottom-40 right-0 w-[600px] h-[600px] ambient-glow-top opacity-50"></div>
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[700px] ambient-glow-top animate-pulse-glow"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1100px] h-[800px] ambient-glow-center"></div>
+        <div class="absolute -bottom-40 right-0 w-[650px] h-[650px] ambient-glow-top opacity-50"></div>
     </div>
 
     <!-- MAIN EDITORIAL CONTAINER -->
@@ -183,63 +221,69 @@
         <section class="pt-12 sm:pt-20 pb-16 text-center space-y-8 max-w-4xl mx-auto relative">
             
             <!-- TOP TAGS -->
-            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-navy-card/80 border hairline-gold text-xs tracking-[0.3em] uppercase text-gold-light font-medium">
+            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-navy-card/90 border hairline-gold text-xs tracking-[0.3em] uppercase text-gold-light font-medium shadow-lg backdrop-blur-md">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-main opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-main"></span>
+                </span>
                 <span>SINOP - MT</span>
                 <span class="text-gold-main/40">•</span>
                 <span>2ª EDIÇÃO DE GALA</span>
             </div>
 
-            <!-- HUMMINGBIRD VECTOR (BEIJA-FLOR TOTALLY VISIBLE) -->
-            <div class="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto my-4 flex items-center justify-center">
-                <svg class="w-full h-full text-gold-main drop-shadow-[0_8px_24px_rgba(201,163,91,0.25)]" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 45 C 35 30, 50 25, 65 30 C 80 20, 95 18, 110 12 C 100 25, 92 38, 85 45 C 95 55, 105 70, 112 85 C 98 78, 85 70, 75 62 C 68 75, 55 88, 38 95 C 48 82, 52 70, 50 60 C 40 62, 30 58, 25 45 Z" fill="url(#heroGoldGrad)" />
-                    <path d="M65 30 C 75 22, 90 20, 105 15 C 95 26, 88 35, 82 42" stroke="#F6F2E9" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
-                    <path d="M72 38 C 80 32, 90 28, 100 24" stroke="#D8BB79" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
-                    <path d="M50 60 C 42 72, 30 82, 18 88 C 28 80, 36 70, 42 62" stroke="#F6F2E9" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
-                    <path d="M48 65 C 40 75, 26 88, 12 95 C 24 86, 33 75, 40 66" stroke="#C9A35B" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
-                    <path d="M25 45 L5 48" stroke="#F6F2E9" stroke-width="1.5" stroke-linecap="round"/>
-                    <defs>
-                        <linearGradient id="heroGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#F6F2E9" />
-                            <stop offset="35%" stop-color="#D8BB79" />
-                            <stop offset="70%" stop-color="#C9A35B" />
-                            <stop offset="100%" stop-color="#98732F" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-
             <!-- MAIN TITLE -->
-            <div class="space-y-3">
-                <h1 class="font-title text-4xl sm:text-6xl lg:text-7xl font-normal text-paper-light tracking-tight leading-[1.05]">
+            <div class="space-y-4 pt-2">
+                <h1 class="font-title text-4xl sm:text-6xl lg:text-7xl font-normal text-paper-light tracking-tight leading-[1.08]">
                     2ª Festa do Corretor<br class="hidden sm:inline">
                     <span class="italic gold-gradient-text">de Imóveis de Sinop</span>
                 </h1>
                 
-                <p class="font-serif text-lg sm:text-2xl text-gold-light italic tracking-widest pt-2">
+                <p class="font-serif text-lg sm:text-2xl text-gold-light italic tracking-[0.2em] pt-1">
                     CONECTAR • VALORIZAR • CELEBRAR
                 </p>
             </div>
 
+            <!-- DYNAMIC COUNTDOWN TIMER -->
+            <div class="py-4">
+                <div class="inline-grid grid-cols-4 gap-3 sm:gap-6 p-4 sm:p-6 rounded-2xl glass-card border hairline-gold shadow-2xl max-w-lg mx-auto">
+                    <div class="text-center">
+                        <span id="cd-days" class="font-title text-2xl sm:text-4xl text-paper-light block font-semibold">00</span>
+                        <span class="text-[9px] sm:text-[11px] text-gold-light uppercase tracking-widest font-medium">Dias</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="cd-hours" class="font-title text-2xl sm:text-4xl text-paper-light block font-semibold">00</span>
+                        <span class="text-[9px] sm:text-[11px] text-gold-light uppercase tracking-widest font-medium">Horas</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="cd-mins" class="font-title text-2xl sm:text-4xl text-paper-light block font-semibold">00</span>
+                        <span class="text-[9px] sm:text-[11px] text-gold-light uppercase tracking-widest font-medium">Min</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="cd-secs" class="font-title text-2xl sm:text-4xl text-paper-light block font-semibold">00</span>
+                        <span class="text-[9px] sm:text-[11px] text-gold-light uppercase tracking-widest font-medium">Seg</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- EVENT DETAILS SUMMARY -->
-            <div class="pt-4 pb-2 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs sm:text-sm text-paper-muted uppercase tracking-[0.2em]">
-                <div class="flex items-center gap-2">
-                    <i class="fa-regular fa-calendar text-gold-main"></i>
+            <div class="pt-2 pb-2 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-paper-muted uppercase tracking-[0.2em]">
+                <div class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-navy-highlight/40 border border-gold-main/10">
+                    <i class="fa-regular fa-calendar text-gold-main text-sm"></i>
                     <span>05 DE SETEMBRO DE 2026</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-regular fa-clock text-gold-main"></i>
+                <div class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-navy-highlight/40 border border-gold-main/10">
+                    <i class="fa-regular fa-clock text-gold-main text-sm"></i>
                     <span>20H00</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-gold-main"></i>
+                <div class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-navy-highlight/40 border border-gold-main/10">
+                    <i class="fa-solid fa-location-dot text-gold-main text-sm"></i>
                     <span>GARDEN HALL EVENTOS</span>
                 </div>
             </div>
 
             <!-- HERO CTA -->
-            <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#participacao" class="w-full sm:w-auto px-9 py-4 rounded-full btn-gold-luxury font-sans text-xs tracking-[0.2em] uppercase font-semibold text-center">
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#participacao" class="w-full sm:w-auto px-10 py-4.5 rounded-full btn-gold-luxury font-sans text-xs tracking-[0.22em] uppercase font-semibold text-center">
                     GARANTIR MINHA PARTICIPAÇÃO
                 </a>
             </div>
@@ -282,11 +326,11 @@
                 </p>
             </div>
 
-            <!-- EDITORIAL PARTICIPATION OPTIONS (NO HEAVY CARDS) -->
+            <!-- EDITORIAL PARTICIPATION OPTIONS -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
 
                 <!-- OPTION 1: INGRESSO INDIVIDUAL -->
-                <div class="p-8 sm:p-10 rounded-2xl bg-navy-card/60 border hairline-gold flex flex-col justify-between space-y-8 relative group hover:border-gold-main/50 transition-all duration-300">
+                <div class="p-8 sm:p-10 rounded-2xl glass-card border hairline-gold flex flex-col justify-between space-y-8 relative group hover:border-gold-main/50">
                     <div class="space-y-6">
                         
                         <div class="space-y-2 border-b hairline-gold pb-6">
@@ -339,10 +383,10 @@
                 </div>
 
                 <!-- OPTION 2: MESA EMPRESARIAL -->
-                <div class="p-8 sm:p-10 rounded-2xl bg-navy-card/90 border border-gold-main/40 flex flex-col justify-between space-y-8 relative group hover:border-gold-main transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="p-8 sm:p-10 rounded-2xl glass-card border border-gold-main/40 flex flex-col justify-between space-y-8 relative group hover:border-gold-main shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                     
                     <!-- HIGHLIGHT BADGE -->
-                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-main text-navy-base text-[10px] tracking-[0.2em] font-bold uppercase">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-main text-navy-base text-[10px] tracking-[0.2em] font-bold uppercase shadow-lg">
                         PARA 10 CONVIDADOS
                     </div>
 
@@ -408,7 +452,7 @@
         <section class="py-12 sm:py-20 space-y-8 max-w-3xl mx-auto text-center">
             
             <div class="space-y-3">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-highlight border hairline-gold text-gold-light text-[10px] tracking-[0.25em] uppercase font-medium">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-highlight border hairline-gold text-gold-light text-[10px] tracking-[0.25em] uppercase font-medium">
                     <i class="fa-solid fa-trophy text-gold-main text-xs"></i>
                     <span>VOTAÇÃO OFICIAL ABERTA</span>
                 </div>
@@ -586,6 +630,33 @@
                 modal.classList.add('hidden');
             }, 350);
         }
+
+        /* COUNTDOWN TIMER LOGIC */
+        function updateCountdown() {
+            const eventDate = new Date('2026-09-05T20:00:00-04:00').getTime();
+            const now = new Date().getTime();
+            const difference = eventDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('cd-secs').innerText = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('cd-days').innerText = '00';
+                document.getElementById('cd-hours').innerText = '00';
+                document.getElementById('cd-mins').innerText = '00';
+                document.getElementById('cd-secs').innerText = '00';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 </html>
