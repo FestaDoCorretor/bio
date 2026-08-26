@@ -221,14 +221,22 @@
         <section class="pt-12 sm:pt-20 pb-16 text-center space-y-8 max-w-4xl mx-auto relative">
             
             <!-- TOP TAGS -->
-            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-navy-card/90 border hairline-gold text-xs tracking-[0.3em] uppercase text-gold-light font-medium shadow-lg backdrop-blur-md">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-main opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-main"></span>
-                </span>
-                <span>SINOP - MT</span>
-                <span class="text-gold-main/40">•</span>
-                <span>2ª EDIÇÃO DE GALA</span>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-navy-card/90 border hairline-gold text-xs tracking-[0.3em] uppercase text-gold-light font-medium shadow-lg backdrop-blur-md">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-main opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-main"></span>
+                    </span>
+                    <span>SINOP - MT</span>
+                    <span class="text-gold-main/40">•</span>
+                    <span>2ª EDIÇÃO DE GALA</span>
+                </div>
+
+                <!-- DIA DO CORRETOR PROMO BADGE -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-main/15 border border-gold-main/40 text-xs tracking-[0.18em] uppercase text-gold-light font-semibold shadow-lg backdrop-blur-md">
+                    <i class="fa-solid fa-gift text-gold-main"></i>
+                    <span>ESPECIAL DIA DO CORRETOR • INGRESSO R$ 150 (ATÉ 03/09)</span>
+                </div>
             </div>
 
             <!-- MAIN TITLE -->
@@ -288,11 +296,6 @@
                 </a>
             </div>
 
-            <!-- MICRO TEXT -->
-            <p class="text-xs text-paper-dim tracking-widest uppercase pt-1">
-                Ingresso Individual • Mesa Empresarial
-            </p>
-
         </section>
 
         <!-- DIVIDER -->
@@ -327,72 +330,91 @@
             </div>
 
             <!-- EDITORIAL PARTICIPATION OPTIONS -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-                <!-- OPTION 1: INGRESSO INDIVIDUAL -->
-                <div class="p-8 sm:p-10 rounded-2xl glass-card border hairline-gold flex flex-col justify-between space-y-8 relative group hover:border-gold-main/50">
-                    <div class="space-y-6">
+                <!-- OPTION 1: INGRESSO INDIVIDUAL / AUTÔNOMO -->
+                <div class="p-7 sm:p-9 rounded-2xl glass-card border-2 border-gold-main flex flex-col justify-between space-y-6 relative group shadow-[0_0_25px_rgba(201,163,91,0.2)]">
+                    
+                    <!-- PROMO BADGE -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-gold-main via-gold-light to-gold-dark text-navy-base text-[10px] tracking-[0.2em] font-extrabold uppercase shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-crown"></i>
+                        <span>OFERTA DIA DO CORRETOR • AUTÔNOMOS</span>
+                    </div>
+
+                    <div class="space-y-5 pt-2">
                         
-                        <div class="space-y-2 border-b hairline-gold pb-6">
+                        <div class="space-y-2 border-b hairline-gold pb-5">
                             <span class="text-[11px] text-gold-main tracking-[0.25em] uppercase font-semibold block">
-                                CONVITE INDIVIDUAL
+                                CONVITE INDIVIDUAL / AUTÔNOMO
                             </span>
                             <h3 class="font-title text-2xl sm:text-3xl text-paper-light">
                                 Ingresso Individual
                             </h3>
-                            <div class="pt-2 flex items-baseline gap-2">
-                                <span class="font-title text-3xl sm:text-4xl text-gold-light">R$ 300,00</span>
+                            <div class="pt-2 flex items-baseline gap-3">
+                                <span class="text-base text-paper-dim line-through font-title">R$ 300,00</span>
+                                <span class="font-title text-3xl sm:text-4xl text-gold-light font-bold">R$ 150,00</span>
+                            </div>
+                            
+                            <!-- PIX BADGE HIGHLIGHT -->
+                            <div class="pt-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs font-semibold">
+                                    <i class="fa-brands fa-pix text-sm"></i>
+                                    <span>Valor Promocional via PIX até 03/09</span>
+                                </span>
                             </div>
                         </div>
 
                         <!-- BENEFITS -->
-                        <ul class="space-y-3.5 text-xs sm:text-sm text-paper-muted">
-                            <li class="flex items-start gap-3">
+                        <ul class="space-y-3 text-xs sm:text-sm text-paper-muted">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
-                                <span>Acesso individual ao evento</span>
+                                <span class="text-paper-light font-medium">Acesso individual ao evento de gala</span>
                             </li>
-                            <li class="flex items-start gap-3">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
+                                <span>Condição especial para Corretores Autônomos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Jantar Premium All Inclusive</span>
                             </li>
-                            <li class="flex items-start gap-3">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
-                                <span>Atrações e entretenimento exclusivo</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
-                                <span>Acesso completo à área do evento</span>
+                                <span>Atrações e Networking VIP</span>
                             </li>
                         </ul>
 
-                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-4 italic">
-                            <i class="fa-regular fa-credit-card mr-1 text-gold-dark"></i>
-                            Em até 4x no cartão de crédito, com taxa da maquininha.
+                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-3.5 space-y-1">
+                            <div class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                                <i class="fa-brands fa-pix"></i>
+                                <span>Aprovação e reserva imediata via PIX</span>
+                            </div>
+                            <p class="text-[10px] text-paper-dim italic">Também aceita cartão em até 4x (com taxa).</p>
                         </div>
 
                     </div>
 
                     <!-- CTA INGRESSO INDIVIDUAL -->
-                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20no%20ingresso%20individual%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20garantir%20o%20meu." 
+                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20garantir%20meu%20Ingresso%20Individual%20promocional%20por%20R%24%20150%2C00%20via%20PIX." 
                        target="_blank" 
                        rel="noopener" 
-                       class="w-full py-4 rounded-xl btn-outline-luxury text-center font-sans text-xs tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
-                        <span>QUERO MEU INGRESSO</span>
+                       class="w-full py-3.5 rounded-xl btn-gold-luxury text-center font-sans text-xs tracking-[0.18em] uppercase font-bold flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-pix text-base"></i>
+                        <span>GARANTIR INGRESSO (R$ 150)</span>
                     </a>
                 </div>
 
                 <!-- OPTION 2: MESA EMPRESARIAL -->
-                <div class="p-8 sm:p-10 rounded-2xl glass-card border border-gold-main/40 flex flex-col justify-between space-y-8 relative group hover:border-gold-main shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="p-7 sm:p-9 rounded-2xl glass-card border border-gold-main/40 flex flex-col justify-between space-y-6 relative group hover:border-gold-main shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                     
                     <!-- HIGHLIGHT BADGE -->
-                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-gold-main text-navy-base text-[10px] tracking-[0.2em] font-bold uppercase shadow-lg">
+                    <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gold-main text-navy-base text-[10px] tracking-[0.2em] font-bold uppercase shadow-lg">
                         PARA 10 CONVIDADOS
                     </div>
 
-                    <div class="space-y-6">
+                    <div class="space-y-5 pt-2">
                         
-                        <div class="space-y-2 border-b hairline-gold pb-6">
+                        <div class="space-y-2 border-b hairline-gold pb-5">
                             <span class="text-[11px] text-gold-main tracking-[0.25em] uppercase font-semibold block">
                                 ESPAÇO CORPORATIVO
                             </span>
@@ -400,42 +422,46 @@
                                 Mesa Empresarial
                             </h3>
                             <div class="pt-2 flex items-baseline gap-2">
-                                <span class="font-title text-3xl sm:text-4xl text-gold-light">R$ 2.500,00</span>
+                                <span class="font-title text-3xl sm:text-4xl text-gold-light font-semibold">R$ 2.500,00</span>
                             </div>
+                            <p class="text-[11px] text-emerald-400 font-medium flex items-center gap-1 pt-1">
+                                <i class="fa-brands fa-pix"></i>
+                                <span>Pagamento facilitado via PIX ou Cartão</span>
+                            </p>
                         </div>
 
                         <!-- BENEFITS -->
-                        <ul class="space-y-3.5 text-xs sm:text-sm text-paper-muted">
-                            <li class="flex items-start gap-3">
+                        <ul class="space-y-3 text-xs sm:text-sm text-paper-muted">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span class="text-paper-light font-medium">Mesa exclusiva para 10 convidados</span>
                             </li>
-                            <li class="flex items-start gap-3">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Jantar Premium All Inclusive</span>
                             </li>
-                            <li class="flex items-start gap-3">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Identificação da empresa na mesa</span>
                             </li>
-                            <li class="flex items-start gap-3">
+                            <li class="flex items-start gap-2.5">
                                 <i class="fa-solid fa-check text-gold-main text-xs pt-1"></i>
                                 <span>Acesso completo ao evento</span>
                             </li>
                         </ul>
 
-                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-4 italic">
+                        <div class="text-[11px] text-paper-dim border-t hairline-gold pt-3.5">
                             <i class="fa-regular fa-credit-card mr-1 text-gold-dark"></i>
-                            Em até 10x no cartão de crédito, com taxa da maquininha.
+                            PIX à vista ou em até 10x no cartão de crédito.
                         </div>
 
                     </div>
 
                     <!-- CTA MESA EMPRESARIAL -->
-                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20fazer%20a%20reserva." 
+                    <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas.%20Gostaria%20de%20receber%20as%20informa%C3%A7%C3%B5es%20de%20pagamento%20via%20PIX." 
                        target="_blank" 
                        rel="noopener" 
-                       class="w-full py-4 rounded-xl btn-gold-luxury text-center font-sans text-xs tracking-[0.2em] uppercase font-semibold flex items-center justify-center gap-2">
+                       class="w-full py-3.5 rounded-xl btn-outline-luxury text-center font-sans text-xs tracking-[0.18em] uppercase font-semibold flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-sm"></i>
                         <span>RESERVAR MESA EMPRESARIAL</span>
                     </a>
@@ -562,39 +588,42 @@
             <!-- OPTIONS -->
             <div class="space-y-3">
                 <!-- INGRESSO INDIVIDUAL -->
-                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20no%20ingresso%20individual%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20saber%20como%20fa%C3%A7o%20para%20garantir%20o%20meu." 
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20garantir%20meu%20Ingresso%20Individual%20promocional%20por%20R%24%20150%2C00%20via%20PIX." 
                    target="_blank" 
                    rel="noopener"
                    onclick="closeBottomSheet()"
-                   class="w-full p-4 rounded-xl bg-navy-highlight border hairline-gold flex items-center justify-between text-left group">
+                   class="w-full p-4 rounded-xl bg-gradient-to-r from-navy-highlight to-navy-card border-2 border-gold-main flex items-center justify-between text-left group">
                     <div>
-                        <span class="text-xs text-gold-light font-bold block uppercase tracking-wider">Ingresso Individual</span>
-                        <span class="text-[11px] text-paper-muted">R$ 300,00 • Jantar All Inclusive</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-gold-light font-bold uppercase tracking-wider">Ingresso Individual / Autônomo</span>
+                            <span class="text-[9px] bg-gold-main text-navy-base font-extrabold px-1.5 py-0.5 rounded uppercase">PIX R$ 150</span>
+                        </div>
+                        <span class="text-[11px] text-paper-muted"><s class="text-paper-dim">R$ 300</s> <strong class="text-gold-main font-semibold">R$ 150,00</strong> • Valor Promocional até 03/09</span>
                     </div>
-                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                    <i class="fa-brands fa-pix text-emerald-400 text-xl"></i>
                 </a>
 
                 <!-- MESA EMPRESARIAL -->
-                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas%20da%20Festa%20do%20Corretor%202026.%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20fazer%20a%20reserva." 
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Tenho%20interesse%20na%20Mesa%20Empresarial%20para%2010%20pessoas.%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20pagamento%20via%20PIX." 
                    target="_blank" 
                    rel="noopener"
                    onclick="closeBottomSheet()"
                    class="w-full p-4 rounded-xl bg-navy-highlight border border-gold-main/50 flex items-center justify-between text-left group">
                     <div>
                         <span class="text-xs text-gold-main font-bold block uppercase tracking-wider">Mesa Empresarial</span>
-                        <span class="text-[11px] text-paper-muted">R$ 2.500,00 • Para 10 convidados</span>
+                        <span class="text-[11px] text-paper-muted">R$ 2.500,00 • Para 10 convidados • PIX ou 10x cartão</span>
                     </div>
                     <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
                 </a>
 
                 <!-- FALAR COM ELENIR -->
-                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Festa%20do%20Corretor%20de%20Im%C3%B3veis%20de%20Sinop%202026." 
+                <a href="https://wa.me/5566999647852?text=Ol%C3%A1%2C%20Elenir!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20Festa%20do%20Corretor." 
                    target="_blank" 
                    rel="noopener"
                    onclick="closeBottomSheet()"
                    class="w-full py-3 rounded-xl border hairline-gold text-center text-xs text-paper-muted flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-gold-main"></i>
-                    <span>Falar com Elenir Kujat</span>
+                    <span>Dúvidas? Falar com Elenir</span>
                 </a>
             </div>
 
